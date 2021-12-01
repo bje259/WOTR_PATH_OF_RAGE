@@ -93,6 +93,8 @@ namespace WOTR_PATH_OF_RAGE.NewFeatures
                 IfFalse = new ActionList() { Actions = new GameAction[] { Helpers.Create<ContextActionRemoveSelf>() } }
             };
 
+            //Main.LogDebug($"{__instance.Owner.CharacterName}:{__instance.Blueprint.name} - OnNewRound");
+
             demonTearBuff.AddComponent<NewRoundTrigger>(c => {
                 c.NewRoundActions = new ActionList();
                 c.NewRoundActions.Actions = new GameAction[]{ conditionalBuffEffects };
